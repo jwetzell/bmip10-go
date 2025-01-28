@@ -92,7 +92,7 @@ func (e *Encoder) Encode(sample int32) int32 {
 	return code_word
 }
 
-func (e *Encoder) Reset(sample int32) {
+func (e *Encoder) Reset() {
 	e.Table = int32(e.Config.DefaultTable)
 }
 
@@ -115,6 +115,6 @@ func (d *Decoder) Decode(code_word int32) int32 {
 	return decoded
 }
 
-func (d *Decoder) Reset(sample int32) {
+func (d *Decoder) Reset() {
 	d.Table = int32(d.Config.DefaultTable)
 }
