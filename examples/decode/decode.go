@@ -14,7 +14,7 @@ func main() {
 
 	fmt.Printf("index\tenc\tdec\n")
 
-	for i := 0; i < len(encodedData); i++ {
+	for i := range encodedData {
 		decoded := decoder.Decode(encodedData[i])
 		fmt.Printf("%d\t%d\t%d\n", i, encodedData[i], decoded)
 	}

@@ -11,7 +11,7 @@ func main() {
 	encoder := bmip10.NewEncoder(10, 8)
 
 	fmt.Printf("index\traw\tenc\n")
-	for i := 0; i < len(rawData); i++ {
+	for i := range rawData {
 		encoded := encoder.Encode(rawData[i])
 		fmt.Printf("%d\t%d\t%d\n", i, rawData[i], encoded)
 	}
